@@ -1,6 +1,6 @@
 # Mictlán
 
-One Paragraph of project description goes here
+Las pelotas
 
 ## Getting Started
 
