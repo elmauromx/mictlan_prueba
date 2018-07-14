@@ -10,17 +10,6 @@ chai.use(chaiHttp);
   * Test the /GET route
   */
 describe('/GET /api/capacity/get_interfaces_config', () => {
-    it('it should GET all interfaces of a device', (done) => {
-      chai.request(server)
-          .get('/api/capacity/get_interfaces_config/172.16.35.99')
-          .end((err, res) => {
-              let should = chai.should();
-              res.should.have.status(200);
-              res.body.should.be.a('object');
-              //res.body.length.should.be.eql(0);
-            done();
-          });
-    });
 
     it('it should get 404 error', (done) => {
       chai.request(server)
