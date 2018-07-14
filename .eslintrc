@@ -1,0 +1,17 @@
+---
+  env:
+    es6: true
+    browser: true
+    node: true
+  plugins: ["mocha"]
+  extends: ["eslint:recommended"]
+  rules:
+    semi: "error"
+    no-console: "off"
+    no-unused-vars : 2
+    no-undef: 2
+    no-alert: "error"
+
+  parserOptions:
+    sourceType: "module"
+
