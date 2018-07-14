@@ -1,0 +1,72 @@
+{
+  "name": "mictlan",
+  "version": "1.0.0",
+  "description": "One Paragraph of project description goes here",
+  "main": "index.js",
+  "scripts": {
+    "nodemon": "nodemon dist/backend.mictlan.js",
+    "nodemon:dev": "nodemon dist/index.js",
+    "ppm_install": "pip3 install -r python/requirements.txt",
+    "dev": "webpack --mode development --module-bind js=babel-loader",
+    "build": "webpack --mode production --module-bind js=babel-loader",
+    "test": "mocha --timeout 10000",
+    "start": "npm run build && npm run nodemon",
+    "build:dev": "gulp && npm run nodemon:dev",
+    "_build:dev": "rimraf dist/ && babel ./src --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "start:dev": "npm run build && node dist/index.js",
+    "test:build": "mocha-webpack",
+    "test:build2": "mocha test --reporter mocha-junit-reporter --reporter-options mochaFile=test/file.xml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://189.206.241.37/evolucion_tecnologica/mictlan.git"
+  },
+  "keywords": [
+    "software",
+    "defined",
+    "network"
+  ],
+  "author": "Jesus Guadalupe Briones Duran",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "del": "^3.0.0",
+    "eslint": "^4.19.1",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-mocha": "^5.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-eslint": "^4.0.2",
+    "mocha": "^5.2.0",
+    "mocha-junit-reporter": "^1.17.0",
+    "mocha-webpack": "^1.1.0",
+    "pm2": "^2.10.4",
+    "run-sequence": "^2.2.1",
+    "webpack": "^4.12.0",
+    "webpack-bundle-analyzer": "^2.13.1",
+    "webpack-cli": "^3.0.8"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "method-override": "^2.3.10",
+    "mongoose": "^5.1.3",
+    "morgan": "^1.9.0",
+    "multer": "^1.3.0",
+    "nodemon": "^1.17.5",
+    "os": "^0.1.1",
+    "python-shell": "^0.5.0",
+    "setup": "0.0.3"
+  }
+}
