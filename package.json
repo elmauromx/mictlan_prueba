@@ -9,7 +9,7 @@
     "ppm_install": "pip3 install -r python/requirements.txt",
     "dev": "webpack --mode development --module-bind js=babel-loader",
     "build": "webpack --mode production --module-bind js=babel-loader",
-    "test": "mocha --timeout 10000",
+    "test": "mocha --exit",
     "start": "npm run build && npm run nodemon",
     "build:dev": "gulp && npm run nodemon:dev",
     "_build:dev": "rimraf dist/ && babel ./src --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
